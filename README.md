@@ -1,134 +1,148 @@
-# Markdown Komplettübersicht
+# Vollständige Markdown-Demonstration
 
-Dieses Dokument zeigt (fast) alles, was Markdown kann – inklusive Erweiterungen wie **LaTeX-Mathematik**, **Mermaid-Diagramme**, Tabellen und Fußnoten.
-
----
-
-## 1. Überschriften
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
+Dieses Dokument zeigt **möglichst viele Markdown-Funktionen** in einer Datei.
 
 ---
 
-## 2. Textformatierung
+## Inhaltsverzeichnis
 
-**Fett**
-*Kursiv*
-***Fett + Kursiv***
-~~Durchgestrichen~~
-`Inline-Code`
-
-> Blockzitat
->
-> > Verschachteltes Zitat
-
----
-
-## 3. Listen
-
-### Ungeordnet
-
-* Punkt 1
-* Punkt 2
-
-  * Unterpunkt
-
-### Geordnet
-
-1. Eins
-2. Zwei
-
-   1. Untereins
-   2. Unterzwei
-
-### Task-Liste
-
-* [x] Erledigt
-* [ ] Offen
+- [Vollständige Markdown-Demonstration](#vollständige-markdown-demonstration)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Textformatierung](#textformatierung)
+  - [Fußnoten](#fußnoten)
+  - [Listen](#listen)
+    - [Unsortiert](#unsortiert)
+    - [Sortiert](#sortiert)
+  - [Links \& Bilder](#links--bilder)
+  - [Code](#code)
+    - [Codeblock (Python)](#codeblock-python)
+    - [Codeblock (JSON)](#codeblock-json)
+  - [Tabellen](#tabellen)
+  - [Zitate \& Trennlinien](#zitate--trennlinien)
+  - [Mathematik (KaTeX)](#mathematik-katex)
+  - [Mermaid-Diagramme](#mermaid-diagramme)
+    - [Flowchart](#flowchart)
+    - [Sequenzdiagramm](#sequenzdiagramm)
+  - [HTML in Markdown](#html-in-markdown)
+  - [Aufgabenlisten](#aufgabenlisten)
+  - [Ende](#ende)
 
 ---
 
-## 4. Links & Bilder
+## Textformatierung
 
-[OpenAI](https://www.openai.com)
+Normaler Text, **fett**, *kursiv*, ***fett & kursiv***, ~~durchgestrichen~~.
+
+> Blockzitat mit
+> mehreren Zeilen.
+> > Und verschachtelt.
+
+Inline-Code: `console.log("Hallo Welt")`
+
+---
+
+## Fußnoten
+
+Hier ist eine einfache Fußnote[^1], und hier eine andere[^2].
+
+[^1]: Das ist die erste Fußnote.
+
+[^2]: Fußnote über
+	mehrere Zeilen
+	sind möglich.
+
+---
+
+## Listen
+
+### Unsortiert
+
+- Punkt A
+- Punkt B
+	- Unterpunkt B.1
+	- Unterpunkt B.2
+
+### Sortiert
+
+1. Erster Punkt
+1. Zweiter Punkt
+1. Dritter Punkt
+	1.  Erster Unterpunkt
+	1. Zweiter Unterpunkt
+1. Vierter Punkt
+
+---
+
+## Links & Bilder
+
+[OpenAI](https://openai.com)
+
+Bild mit dem Namen **image1**:
 
 ![Beispielbild](https://upload.wikimedia.org/wikipedia/commons/2/26/VLC_media_player_3.0.16_screenshot.png)
 
 ---
 
-## 5. Codeblöcke
+## Code
+
+### Codeblock (Python)
 
 ```python
-def hello():
-    print("Hallo Welt")
+def hallo(name):
+    return f"Hallo {name}!"
 ```
 
-```javascript
-console.log("Hello World");
+### Codeblock (JSON)
+
+```json
+{
+  "name": "Markdown",
+  "version": 1.0,
+  "features": ["text", "code", "math", "mermaid"]
+}
 ```
 
 ---
 
-## 6. Tabellen
+## Tabellen
 
-| Name | Alter | Beruf        |
-| ---- | ----- | ------------ |
-| Anna | 28    | Entwicklerin |
-| Max  | 34    | Designer     |
-
----
-
-## 7. Horizontale Linie
+| Spalte A |  Spalte B | Spalte C |
+| -------: | :-------: | :------- |
+|   rechts | zentriert | links    |
+|      123 |    456    | 789      |
 
 ---
 
----
+## Zitate & Trennlinien
+
+> "Markdown ist einfach und mächtig."
 
 ---
 
----
+## Mathematik (KaTeX)
 
-## 8. Fußnoten
+Inline-Mathe: $a^2 + b^2 = c^2$
 
-Hier ist eine Aussage mit Fußnote[^1].
-
-[^1]: Das ist die Fußnote.
-
----
-
-## 9. Mathematik (LaTeX)
-
-Inline: $E = mc^2$
-
-Block:
+Block-Mathe:
 
 $$
-\int_0^\infty e^{-x} dx = 1
+\int_{0}^{\infty} e^{-x^2} , dx = \frac{\sqrt{\pi}}{2}
 $$
 
-Weitere Beispiele:
+Matrix:
 
 $$
-a^2 + b^2 = c^2
-$$
-
-$$
-f(x) = x^2 + 3x + 5
+A = \begin{pmatrix}
+1 & 2 \\
+3 & 4
+\end{pmatrix}
 $$
 
 ---
 
-## 10. Mermaid Diagramme
+## Mermaid-Diagramme
+
+### Flowchart
 
 ```mermaid
 graph TD
@@ -143,49 +157,33 @@ graph TD
 
 ```mermaid
 sequenceDiagram
-    participant A as Nutzer
-    participant B as System
+    participant A
+    participant B
     A->>B: Anfrage
     B-->>A: Antwort
 ```
 
 ---
 
-## 11. HTML in Markdown
+## HTML in Markdown
+
+<div style="border:1px solid #ccc; padding:10px;">
+  <strong>HTML-Block</strong><br/>
+  Dieser Abschnitt nutzt reines HTML.
+</div>
 
 <div style="color: red;">Dieser Text ist rot (HTML)</div>
 
 ---
 
-## 12. Escape-Zeichen
+## Aufgabenlisten
 
-\*kein kursiv\*
-
----
-
-## 13. Definitionen
-
-Begriff
-: Definition des Begriffs
+* [x] Markdown schreiben
+* [x] Mathe einfügen
+* [x] Mermaid nutzen
+* [ ] Welt erobern
 
 ---
-
-## 14. Emojis 😄
-
-:smile: :rocket: :fire:
-
----
-
-## 15. Checkliste komplex
-
-* [x] Markdown
-* [x] Tabellen
-* [x] Mathe
-* [x] Mermaid
-* [ ] Perfektion 😄
-
----
-
 ## Ende
 
-Das war eine umfassende Markdown-Demo-Datei 🚀
+*Dieses Dokument demonstriert die meisten gängigen Markdown-Erweiterungen.*
