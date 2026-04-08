@@ -77,8 +77,6 @@ Hier ist eine einfache Fußnote[^1], und hier eine andere[^2].
 
 [OpenAI](https://openai.com)
 
-Bild mit dem Namen **image1**:
-
 ![Beispielbild](https://upload.wikimedia.org/wikipedia/commons/2/26/VLC_media_player_3.0.16_screenshot.png)
 
 ---
