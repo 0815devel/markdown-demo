@@ -62,7 +62,7 @@ Dieses Dokument zeigt (fast) alles, was Markdown kann – inklusive Erweiterunge
 
 [OpenAI](https://www.openai.com)
 
-![Beispielbild]([https://via.placeholder.com/150](https://upload.wikimedia.org/wikipedia/commons/2/26/VLC_media_player_3.0.16_screenshot.png))
+![Beispielbild](https://upload.wikimedia.org/wikipedia/commons/2/26/VLC_media_player_3.0.16_screenshot.png)
 
 ---
 
